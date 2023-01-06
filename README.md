@@ -17,4 +17,43 @@
 
 # 使用
 
-安装本包和 prettier，eslint，stylelint
+安装本包和 prettier，eslint，stylelint,如果项目使用 typescript,则再安装 typescript,洛神会自动支持 typescript 的格式化.
+
+```shell
+npm install -D luoshen prettier eslint stylelint
+```
+
+- 配置 `.eslintrc.js`
+
+  ```javascript
+  module.exports = {
+    extends: [require.resolve('luoshen/dist/eslint')],
+
+    rules: {
+      // your rules
+    },
+  };
+  ```
+
+- 配置 `.prettierrc.js`
+
+```javascript
+const luoshen = require('luoshen');
+
+module.exports = {
+  ...luoshen.prettier,
+};
+```
+
+- 配置 `.stylelintrc.js`
+
+```javascript
+module.exports = {
+  extends: [require.resolve('luoshen/dist/stylelint')],
+  rules: {
+    // your rules
+  },
+};
+```
+
+- 配置 `gitHook`

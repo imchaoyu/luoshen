@@ -3,7 +3,10 @@
   "version": "0.1.0",
   "description": "a perfect front-end style rules like the Luo Shen of China",
   "main": "dist/index.js",
-  "author": "chaoyumail@126.com",
+  "author": {
+    "name": "chaoyu",
+    "eamil": "chaoyumail@126.com"
+  },
   "scripts": {
     "build": "tsc --build tsconfig.json && npm run copy-files",
     "copy-files": "copyfiles -u 1 src/.prettierignore ./dist/",
@@ -53,7 +56,7 @@
     "prettier"
   ],
   "files": [
-    "dist",
+    "dist/",
     "cli.js"
   ],
   "homepage": "https://github.com/imchaoyu/luoshen.git#readme",

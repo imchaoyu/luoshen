@@ -1,0 +1,6 @@
+# ignore file.
+**/node_modules
+/dist
+/.vscode
+npm-debug.log*
+yarn-error.log

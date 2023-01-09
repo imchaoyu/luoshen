@@ -1,10 +1,10 @@
 #!/usr/bin/env node
 
-import chalk from 'chalk';
 const yParser = require('yargs-parser');
 const semver = require('semver');
 const { existsSync } = require('fs');
 const { join } = require('path');
+const chalk = require('chalk');
 
 // print version and @local
 const args = yParser(process.argv.slice(2));

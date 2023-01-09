@@ -12,12 +12,13 @@
 
 > 包含 Prettier，ESLint，Stylelint， TypeScript 的配置文件合集,并使用 gitHook 对 git 提交信息进行校验。
 
-# 支持项目类型
+# 功能
 
-- React
-- Vue
-- TypeScript
-- nodejs
+- [x] React
+- [x] TypeScript
+- [x] nodejs
+- [ ] Git hook commit-msg
+- [ ] Vue
 
 > 根据不同项目加载不同配置项，减少多余配置
 

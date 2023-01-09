@@ -1,16 +1,15 @@
 #!/usr/bin/env node
 
+import chalk from 'chalk';
 const yParser = require('yargs-parser');
 const semver = require('semver');
 const { existsSync } = require('fs');
 const { join } = require('path');
-const chalk = require('chalk');
 
 // print version and @local
 const args = yParser(process.argv.slice(2));
 
 if (args.v || args.version) {
-  // eslint-disable-next-line global-require
   console.log(require('./package').version);
   if (existsSync(join(__dirname, '.local'))) {
     console.log(chalk.cyan('@local'));
@@ -28,7 +27,6 @@ const option = args._[0];
 
 switch (option) {
   case 'verify-commit':
-    // eslint-disable-next-line global-require
     require('./dist/verifyCommit');
     break;
 

@@ -1,5 +1,6 @@
 const a = 1;
 const b = 2;
+const name = 'aa';
 let c;
 const func = function (a, b) {
   console.log('hah');
@@ -31,7 +32,7 @@ function HelloWorld({
 
   return (
     <div
-      className="HelloWorld"
+      className='HelloWorld'
       title={`You are visitor number ${num}`}
       onMouseOver={onMouseOver}
     >

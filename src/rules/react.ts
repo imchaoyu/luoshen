@@ -1,7 +1,7 @@
 export default {
   // Specify whether double or single quotes should be used in JSX attributes
   // http://eslint.org/docs/rules/jsx-quotes
-  'jsx-quotes': ['error', 'prefer-double'],
+  'jsx-quotes': ['error', 'prefer-single'],
 
   'class-methods-use-this': [
     'error',

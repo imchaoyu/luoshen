@@ -39,8 +39,8 @@ switch (option) {
       Examples:
         ${chalk.gray('luoshen')}
         luoshen -h
-        ${chalk.gray('verify-commit ')}
-        luoshen verify-commit 
+        ${chalk.gray('verify-commit')}
+        luoshen verify-commit
         `.trim();
       console.log(details);
     }

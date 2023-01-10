@@ -10,14 +10,14 @@
 
 > 以“洛神”命名，希望在繁琐复杂的前端样式规范配置中，减轻工作量，让前端格式化更简单更优美。
 
-> 包含 Prettier，ESLint，Stylelint， TypeScript 的配置文件合集,并使用 gitHook 对 git 提交信息进行校验。
+> 包含 Prettier，ESLint，Stylelint， TypeScript 的配置文件合集,并使用 husky 对 git 提交信息进行校验。
 
 # 功能
 
 - [x] React
 - [x] TypeScript
 - [x] nodejs
-- [ ] Git hook commit-msg
+- [x] husky commit-msg
 - [ ] Vue
 
 > 根据不同项目加载不同配置项，减少多余配置
@@ -63,4 +63,23 @@ module.exports = {
 };
 ```
 
-- 配置 `gitHook`
+- 配置 `husky`
+  1. 安装husky
+   
+  ```shell
+  npm install -D husky
+  ```
+
+  2. package.json 增加prepare命令
+   
+  ```json
+  "script":{
+    "prepare": "husky install"
+  }
+  ```
+
+  3. 添加commit-msg执行脚本
+   
+  ```shell
+  npx husky add .husky/commit-msg 'npx luoshen verify-commit "$1"'
+  ```

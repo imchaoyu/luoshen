@@ -77,6 +77,12 @@ module.exports = {
     "prepare": "husky install"
   }
   ```
+  然后运行`npm run prepare`
+  或者直接运行以下命令：
+  ```shell
+  npm pkg set scripts.prepare="husky install"
+  npm run prepare
+  ```
 
   3. 添加commit-msg执行脚本
    

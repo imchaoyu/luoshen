@@ -18,6 +18,7 @@ export default {
         'componentWillUpdate',
         'componentDidUpdate',
         'componentWillUnmount',
+        'componentDidCatch',
       ],
     },
   ],

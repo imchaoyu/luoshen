@@ -15,8 +15,10 @@
     "prepublishOnly": "npm run build && np --no-cleanup --yolo --no-publish --any-branch"
   },
   "devDependencies": {
+    "@vue/eslint-config-standard": "^8.0.1",
     "copyfiles": "^2.4.1",
     "cross-env": "^7.0.3",
+    "eslint-plugin-vue": "^9.9.0",
     "np": "^7.6.3"
   },
   "dependencies": {

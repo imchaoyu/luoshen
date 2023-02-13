@@ -8,6 +8,8 @@ const isTsProject = fs.existsSync(path.join(process.cwd() || '.', './tsconfig.js
 const isVueProject =
   fs.existsSync(path.join(process.cwd() || '.', './vue.config.js')) ||
   fs.existsSync(path.join(process.cwd() || '.', './src/*.{vue}'));
+let extend = ['prettier', 'plugin:react/recommended', 'plugin:prettier/recommended'];
+let plugins = ['react', 'react-hooks'];
 let rules: any = {
   ...es6,
   // ...jsdoc,
@@ -18,6 +20,8 @@ if (isTsProject) {
 }
 if (isVueProject) {
   rules = { ...rules, ...vue };
+  extend = ['prettier', 'plugin:vue/essential', '@vue/standard', 'plugin:prettier/recommended',];
+  plugins = ['vue']
 } else {
   rules = { ...rules, ...react };
 }
@@ -39,9 +43,9 @@ const parserOptions = {
 };
 
 module.exports = {
-  extends: ['prettier', 'plugin:react/recommended', 'plugin:prettier/recommended'],
+  extends: extend,
   parser: '@babel/eslint-parser',
-  plugins: ['react', 'react-hooks'],
+  plugins,
   env: {
     browser: true,
     node: true,

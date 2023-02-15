@@ -18,7 +18,7 @@
 - [x] TypeScript
 - [x] nodejs
 - [x] husky commit-msg
-- [ ] Vue
+- [x] Vue
 
 > 根据不同项目加载不同配置项，减少多余配置
 
@@ -35,7 +35,8 @@ npm install -D luoshen prettier eslint stylelint
   ```javascript
   module.exports = {
     extends: [require.resolve('luoshen/dist/eslint')],
-
+    // vue 项目使用以下配置项
+    // extends: [require.resolve('luoshen/dist/eslint-vue')],
     rules: {
       // your rules
     },

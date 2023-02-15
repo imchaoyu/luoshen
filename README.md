@@ -90,3 +90,25 @@ module.exports = {
   ```shell
   npx husky add .husky/commit-msg 'npx luoshen verify-commit "$1"'
   ```
+
+# 编辑器设置
+> 项目文件配置好后,设置编辑器,便可以在每次保存时自动格式化
+## VS Code
+  - 安装ESLint、Prettier和StyleLint插件
+  - formatOnSave 关闭
+  - editor.codeActionsOnSave 修改 
+  ```json
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true,
+    "source.fixAll.stylelint": true
+  },
+  ```
+  - stylelint.validate内增加 vue支持
+  ```json
+  "stylelint.validate": [
+    "css",
+    "less",
+    "postcss",
+    "vue"
+  ],
+  ```

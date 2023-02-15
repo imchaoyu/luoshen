@@ -1,5 +1,5 @@
 const eslint = require('./eslint');
-const eslintVue = require('./eslint.vue');
+const eslintVue = require('./eslint-vue');
 const stylelint = require('./stylelint');
 const prettier = require('./prettier');
 

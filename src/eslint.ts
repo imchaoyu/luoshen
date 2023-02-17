@@ -20,6 +20,7 @@ if (isTsProject) {
 
 // parser
 const parserOptions = {
+  ecmaVersion: 'latest',
   ecmaFeatures: {
     jsx: true,
   },

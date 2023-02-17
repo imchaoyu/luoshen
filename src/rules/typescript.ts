@@ -24,12 +24,6 @@ export default {
   ],
 
   /**
-   * @see https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/semi.md
-   */
-  semi: 'off',
-  '@typescript-eslint/semi': ['error'],
-
-  /**
    * @see https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-use-before-define.md
    */
   'no-use-before-define': 'off',
@@ -87,23 +81,6 @@ export default {
   // https://github.com/typescript-eslint/typescript-eslint/issues/1824#issuecomment-957559729
   // ignore
   indent: 'off',
-
-  /**
-   * Enforce consistent indentation (`indent` from TSLint)
-   * @see https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/indent.md
-   */
-  '@typescript-eslint/indent': [
-    'error',
-    2,
-    {
-      SwitchCase: 1,
-      ignoredNodes: [
-        'FunctionExpression > .params[decorators.length > 0]',
-        'FunctionExpression > .params > :matches(Decorator, :not(:first-child))',
-        'ClassBody.body > PropertyDefinition[decorators.length > 0] > .key',
-      ],
-    },
-  ],
 
   /**
    * Require that interface names be prefixed with `I` (`interface-name` from TSLint)

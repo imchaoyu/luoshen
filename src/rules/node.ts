@@ -1,4 +1,5 @@
 export default {
+  'strict': 'off',
   /**
      * disallow new operators with calls to require
      * @see https://github.com/mysticatea/eslint-plugin-node/blob/master/docs/rules/no-new-require.md
